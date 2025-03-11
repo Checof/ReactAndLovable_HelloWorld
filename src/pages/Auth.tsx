@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { useToast } from "@/hooks/use-toast";
+import { ArrowLeft } from 'lucide-react';
 
 const Auth = () => {
   const [email, setEmail] = useState('');
@@ -48,9 +49,20 @@ const Auth = () => {
     }
   };
 
+  const handleBack = () => {
+    navigate('/');
+  };
+
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-background overflow-hidden p-4">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(var(--primary),0.08),transparent_70%)] z-0"></div>
+      
+      <button
+        onClick={handleBack}
+        className="absolute top-4 left-4 p-2 text-muted-foreground hover:text-foreground transition-colors z-10"
+      >
+        <ArrowLeft className="w-6 h-6" />
+      </button>
       
       <div className="w-full max-w-md p-8 space-y-8 bg-card rounded-lg shadow-lg z-10">
         <div className="text-center">
