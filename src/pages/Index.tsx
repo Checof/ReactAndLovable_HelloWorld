@@ -1,12 +1,12 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React from 'react';
+import Hello from '../components/Hello';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen w-full flex items-center justify-center bg-background overflow-hidden p-4">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(var(--primary),0.08),transparent_70%)] z-0"></div>
+      <Hello />
     </div>
   );
 };
